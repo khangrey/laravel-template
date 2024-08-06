@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Abstracts\Tasks\BaseUpdateTask;
+
+final class {{ class }} extends BaseUpdateTask
+{
+    public function __construct() 
+    {
+        // set repository attribute
+    }
+}

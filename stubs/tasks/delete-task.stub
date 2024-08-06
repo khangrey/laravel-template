@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Abstracts\Tasks\BaseDeleteTask;
+
+final class {{ class }} extends BaseDeleteTask
+{
+    public function __construct() 
+    {
+        // set repository attribute
+    }
+}

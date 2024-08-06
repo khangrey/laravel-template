@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Abstracts\Actions\BaseListAction;
+
+final class {{ class }} extends BaseListAction
+{
+    public function __construct()
+    {
+        // set task attribute
+    }
+}

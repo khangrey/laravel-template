@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Abstracts\Actions\BaseDeleteAction;
+
+final class {{ class }} extends BaseDeleteAction
+{
+    public function __construct()
+    {
+        // set task attribute
+    }
+}

@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Abstracts\Actions\BaseUpdateAction;
+
+final class {{ class }} extends BaseUpdateAction
+{
+    public function __construct()
+    {
+        // set task attribute
+    }
+}

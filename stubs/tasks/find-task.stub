@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Abstracts\Tasks\BaseFindTask;
+
+final class {{ class }} extends BaseFindTask
+{
+    public function __construct() 
+    {
+        // set repository attribute
+    }
+}
