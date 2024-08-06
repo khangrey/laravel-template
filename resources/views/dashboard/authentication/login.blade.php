@@ -62,10 +62,10 @@
 
     @push('scripts')
         <!-- particles js -->
-        <script src="{{ asset('velzon/libs/particles.js/particles.js') }}"></script>
+        <script src="{{ asset('dashboard/libs/particles.js/particles.js') }}"></script>
         <!-- particles app js -->
-        <script src="{{ asset('velzon/js/pages/particles.app.js') }}"></script>
+        <script src="{{ asset('dashboard/js/pages/particles.app.js') }}"></script>
         <!-- password-addon init -->
-        <script src="{{ asset('velzon/js/pages/password-addon.init.js') }}"></script>
+        <script src="{{ asset('dashboard/js/pages/password-addon.init.js') }}"></script>
     @endpush
 </x-guest-dashboard-layout>

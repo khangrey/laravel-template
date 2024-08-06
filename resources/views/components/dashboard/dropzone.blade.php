@@ -17,12 +17,12 @@
 <ul class="list-unstyled mb-0" id="dropzone-preview">
     <li class="mt-2" id="dropzone-preview-list">
         <!-- This is used as the file preview template -->
-        <div class="border rounded">
+        <div class="rounded border">
             <div class="d-flex p-2">
-                <div class="flex-shrink-0 me-3">
+                <div class="me-3 flex-shrink-0">
                     <div class="avatar-sm bg-light rounded">
-                        <img data-dz-thumbnail class="img-fluid rounded d-block"
-                            src="{{ asset('velzon/images/new-document.png') }}" alt="Dropzone-Image" />
+                        <img data-dz-thumbnail class="img-fluid d-block rounded"
+                            src="{{ asset('dashboard/images/new-document.png') }}" alt="Dropzone-Image" />
                     </div>
                 </div>
                 <div class="flex-grow-1">
@@ -32,7 +32,7 @@
                         <strong class="error text-danger" data-dz-errormessage></strong>
                     </div>
                 </div>
-                <div class="flex-shrink-0 ms-3">
+                <div class="ms-3 flex-shrink-0">
                     <button data-dz-remove class="btn btn-sm btn-danger">Delete</button>
                 </div>
             </div>

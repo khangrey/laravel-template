@@ -8,5 +8,5 @@
 @endif
 
 @push('scripts')
-    <script src="{{ asset('velzon/libs/prismjs/prism.js') }}"></script>
+    <script src="{{ asset('dashboard/libs/prismjs/prism.js') }}"></script>
 @endpush

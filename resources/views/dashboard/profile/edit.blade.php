@@ -31,7 +31,7 @@
             <div class="col-xxl-9">
                 <div class="card">
                     <div class="card-body p-4">
-                        <x-velzon.validation-errors />
+                        <x-dashboard.validation-errors />
 
                         <div class="row">
                             <div class="col-lg-6">
@@ -94,6 +94,6 @@
     <!--end row-->
 
     @push('scripts')
-        <script src="{{ asset('velzon/js/pages/profile-setting.init.js') }}"></script>
+        <script src="{{ asset('dashboard/js/pages/profile-setting.init.js') }}"></script>
     @endpush
 </x-dashboard-layout>

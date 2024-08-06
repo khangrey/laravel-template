@@ -71,6 +71,6 @@
         <div class="card-footer">{{ $roles->links() }}</div>
     </div>
     @push('scripts')
-        <script src="{{ asset('velzon/js/pages/profile-setting.init.js') }}"></script>
+        <script src="{{ asset('dashboard/js/pages/profile-setting.init.js') }}"></script>
     @endpush
 </x-dashboard-layout>

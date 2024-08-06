@@ -16,15 +16,15 @@
     @stack('links')
 
     <!-- Layout config Js -->
-    <script src="{{ asset('velzon/js/layout.js') }}"></script>
+    <script src="{{ asset('dashboard/js/layout.js') }}"></script>
     <!-- Bootstrap Css -->
-    <link href="{{ asset('velzon/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dashboard/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="{{ asset('velzon/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dashboard/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="{{ asset('velzon/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dashboard/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="{{ asset('velzon/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dashboard/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -48,17 +48,17 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    <script src="{{ asset('velzon/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('velzon/libs/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('velzon/libs/node-waves/waves.min.js') }}"></script>
-    <script src="{{ asset('velzon/libs/feather-icons/feather.min.js') }}"></script>
-    <script src="{{ asset('velzon/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
-    <script src="{{ asset('velzon/js/plugins.js') }}"></script>
+    <script src="{{ asset('dashboard/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('dashboard/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('dashboard/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('dashboard/libs/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('dashboard/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
+    <script src="{{ asset('dashboard/js/plugins.js') }}"></script>
 
     @stack('scripts')
 
     <!-- App js -->
-    <script src="{{ asset('velzon/js/app.js') }}"></script>
+    <script src="{{ asset('dashboard/js/app.js') }}"></script>
 </body>
 
 </html>
