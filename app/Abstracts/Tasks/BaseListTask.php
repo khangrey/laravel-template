@@ -13,15 +13,20 @@ abstract class BaseListTask
         bool $paginate = false,
         string $orderBy = 'id',
         string $orderDirection = 'asc',
+        $exceptId = null,
     ) {
         $query = $this
             ->repository
             ->orderBy($orderBy, $orderDirection);
+
+        if ($exceptId) {
+            $query->where('id', '<>', $exceptId);
+        }
+
         if ($paginate) {
             return $query->paginate($limit);
         }
 
         return $limit ? $query->limit($limit) : $query->all();
-
     }
 }
