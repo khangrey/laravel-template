@@ -21,12 +21,12 @@
             </div>
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title">
-                    <span>{{ __('dashboard.Menu') }}</span>
+                    <span>{{ __('dashboard::app.Menu') }}</span>
                 </li>
                 <li class="nav-item">
                     <x-dashboard::sidebar-link href="/dashboard">
                         <i class="bx bx-home"></i>
-                        <span> {{ __('dashboard.Home') }} </span>
+                        <span> {{ __('dashboard::app.Home') }} </span>
                     </x-dashboard::sidebar-link>
                 </li>
 

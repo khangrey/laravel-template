@@ -5,6 +5,9 @@ declare(strict_types=1);
 return [
     'Welcome back!' => 'Қайта оралуыңызбен!',
     'Log in to the control panel' => 'Басқару тақтасына кіріңіз',
+    'Profile' => 'Профиль',
+    'Menu' => 'Мәзір',
+    'Home' => 'Басты бет',
     'models' => [
         'Guards' => 'Қорғаныстар',
         'Guard' => 'Қорғаныс',
@@ -41,5 +44,6 @@ return [
         'Update :model' => ':model өзгерту',
         'Delete :model' => ':model жою',
         'Go back' => 'Артқа қайту',
+        'Go home' => 'Басты бетке қайту',
     ],
 ];

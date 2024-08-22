@@ -1,5 +1,5 @@
-<x-dashboard-layout :title="__('Profile Settings')">
-    <form method="post" action="{{ route('dashboard.dashboard.profile.update') }}" enctype="multipart/form-data">
+<x-dashboard::app-layout :title="__('dashboard::app.Profile')">
+    <form method="post" action="{{ route('dashboard.profile.update') }}" enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="row">
@@ -31,55 +31,65 @@
             <div class="col-xxl-9">
                 <div class="card">
                     <div class="card-body p-4">
-                        <x-dashboard.validation-errors />
+                        <x-dashboard::validation-errors />
 
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="mb-3">
-                                    <label for="full_name" class="form-label">{{ __('app.Full name') }}</label>
-                                    <input type="text" class="form-control" id="full_name" name="name"
-                                        placeholder="Enter your firstname" value="{{ auth()->user()->name }}">
+                                    <x-dashboard::input-label id="full_name" :value="__('dashboard::app.table.Full name')" />
+                                    <x-dashboard::text-input name="name" id="full_name" :value="auth()->user()->name"
+                                        :placeholder="__('dashboard::app.inputs.Enter :attribute', [
+                                            'attribute' => __('dashboard::app.table.Full name'),
+                                        ])" />
+                                    <x-dashboard::input-error :messages="$errors->get('name')" />
                                 </div>
                             </div>
                             <!--end col-->
                             <div class="col-lg-6">
                                 <div class="mb-3">
-                                    <label for="emailInput" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="emailInput" name="email"
-                                        placeholder="Enter your email" value="{{ auth()->user()->email }}">
+                                    <x-dashboard::input-label id="email" :value="__('dashboard::app.inputs.Email')" />
+                                    <x-dashboard::text-input type="email" name="email" :value="auth()->user()->email"
+                                        :placeholder="__('dashboard::app.inputs.Enter :attribute', [
+                                            'attribute' => __('dashboard::app.inputs.Email'),
+                                        ])" />
+                                    <x-dashboard::input-error :messages="$errors->get('email')" />
                                 </div>
                             </div>
                             <!--end col-->
                             <div class="col-lg-6">
                                 <div>
-                                    <label for="newpasswordInput" class="form-label">
-                                        {{ __('Password') }}
-                                    </label>
-                                    <input type="password" name="password" class="form-control" id="newpasswordInput"
-                                        placeholder="Enter new password">
-
+                                    <x-dashboard::input-label id="password" :value="__('dashboard::app.inputs.Password')" />
+                                    <x-dashboard::text-input type="password" name="password" :placeholder="__('dashboard::app.inputs.Enter :attribute', [
+                                        'attribute' => __('dashboard::app.inputs.Password'),
+                                    ])" />
+                                    <x-dashboard::input-error :messages="$errors->get('password')" />
                                 </div>
                             </div>
                             <!--end col-->
                             <div class="col-lg-6">
                                 <div>
-                                    <label for="confirmpasswordInput" class="form-label">{{ __('Confirm') }}</label>
-                                    <input type="password" name="password_confirmation" class="form-control"
-                                        id="confirmpasswordInput" placeholder="Confirm password">
+                                    <x-dashboard::input-label id="password_confirmation" :value="__('dashboard::app.inputs.Confirm password')" />
+                                    <x-dashboard::text-input type="password" name="password_confirmation"
+                                        :placeholder="__('dashboard::app.inputs.Enter :attribute', [
+                                            'attribute' => __('dashboard::app.inputs.Password'),
+                                        ])" />
                                 </div>
                             </div>
                             <!--end col-->
                             <div class='col-lg-12'>
                                 <div class="text-muted text-warning">
-                                    {{ __("If you don't want to change your password, you can leave these fields empty.") }}
+                                    {{ __('dashboard::app.inputs.password_leave_blank') }}
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="hstack justify-content-end gap-2">
-                                    <button type="submit" class="btn btn-primary">{{ __('Update') }}</button>
-                                    <a href="{{ route('dashboard.welcome') }}" class="btn btn-soft-danger">
-                                        {{ __('Go Home') }}
-                                    </a>
+                                    <x-dashboard::button type="submit" class="btn btn-primary">
+                                        {{ __('dashboard::app.buttons.Update') }}
+                                    </x-dashboard::button>
+                                    <x-dashboard::button href="{{ route('dashboard.welcome') }}"
+                                        class="btn btn-soft-danger">
+                                        {{ __('dashboard::app.buttons.Go home') }}
+                                    </x-dashboard::button>
                                 </div>
                             </div>
                             <!--end col-->
@@ -96,4 +106,4 @@
     @push('scripts')
         <script src="{{ asset('dashboard/js/pages/profile-setting.init.js') }}"></script>
     @endpush
-</x-dashboard-layout>
+</x-dashboard::app-layout>

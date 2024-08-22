@@ -6,14 +6,11 @@
                     <div class="flex-grow-1">
                         <h4 class="fs-16 mb-1">
                             {{ __('Hello!') }}
-                            {{ auth()->check() ? auth()->user()->name : __('User') }}</h4>
+                            {{ auth()->user()->name }}
+                        </h4>
                     </div>
                 </div><!-- end card header -->
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-3 col-md-6">
-            </div><!-- end col -->
-        </div> <!-- end row-->
     </div>
 </x-dashboard::app-layout>

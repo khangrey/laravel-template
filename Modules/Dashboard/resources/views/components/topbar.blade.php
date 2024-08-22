@@ -42,13 +42,13 @@
                         <!-- item-->
                         <a class="dropdown-item" href="{{ route('dashboard.profile.edit') }}">
                             <span class="align-middle">
-                                {{ __('dashboard.Profile') }}
+                                {{ __('dashboard::app.Profile') }}
                             </span>
                         </a>
                         <x-dashboard::logout-button class="dropdown-item" :action="route('dashboard.logout')" method="delete">
                             <i class="mdi mdi-logout text-muted fs-16 me-1 align-middle"></i>
                             <span class="align-middle">
-                                {{ __('dashboard.buttons.Logout') }}
+                                {{ __('dashboard::app.buttons.Logout') }}
                             </span>
                         </x-dashboard::logout-button>
                     </div>

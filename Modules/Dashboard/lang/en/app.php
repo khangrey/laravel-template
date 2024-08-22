@@ -5,6 +5,9 @@ declare(strict_types=1);
 return [
     'Welcome back!' => 'Welcome back!',
     'Log in to the control panel' => 'Log in to the control panel',
+    'Profile' => 'Profile',
+    'Menu' => 'Menu',
+    'Home' => 'Home',
     'models' => [
         'Guards' => 'Guards',
         'Guard' => 'Guard',
@@ -41,5 +44,6 @@ return [
         'Update :model' => 'Update :model',
         'Delete :model' => 'Delete :model',
         'Go back' => 'Go back',
+        'Go home' => 'Go home',
     ],
 ];
