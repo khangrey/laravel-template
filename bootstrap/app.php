@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use App\Http\Middleware\AdminAuthenticate;
-use App\Http\Middleware\RedirectIfAdminAuthenticated;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Modules\Dashboard\Http\Middleware\AdminAuthenticate;
+use Modules\Dashboard\Http\Middleware\RedirectIfAdminAuthenticated;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(

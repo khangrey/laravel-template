@@ -2,12 +2,16 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "nwidart/laravel-modules": "^11.0",
         "php-flasher/flasher-notyf-laravel": "^2.0",
         "prettus/l5-repository": "^2.9",
         "spatie/laravel-medialibrary": "^11.8",
@@ -18,6 +22,7 @@
         "barryvdh/laravel-ide-helper": "^3.1",
         "fakerphp/faker": "^1.23",
         "larastan/larastan": "^2.9",
+        "laravel-lang/common": "^6.4",
         "laravel/pint": "^1.13",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
@@ -56,6 +61,11 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "merge-plugin": {
+            "include": [
+                "Modules/*/composer.json"
+            ]
         }
     },
     "config": {
@@ -64,7 +74,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "minimum-stability": "stable",

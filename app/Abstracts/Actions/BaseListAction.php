@@ -14,7 +14,8 @@ abstract class BaseListAction
         string $orderBy = 'id',
         string $orderDirection = 'asc',
         bool $published = false,
+        $exceptId = null
     ) {
-        return $this->task->run($limit, $paginate, $orderBy, $orderDirection, $published);
+        return $this->task->run($limit, $paginate, $orderBy, $orderDirection, $published, $exceptId);
     }
 }

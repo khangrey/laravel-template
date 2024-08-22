@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/medialibrary",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Medialibrary\\": "app/",
+            "Modules\\Medialibrary\\Database\\Factories\\": "database/factories/",
+            "Modules\\Medialibrary\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Medialibrary\\Tests\\": "tests/"
+        }
+    }
+}

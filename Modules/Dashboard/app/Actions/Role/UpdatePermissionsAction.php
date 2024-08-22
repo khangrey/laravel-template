@@ -1,0 +1,29 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Dashboard\Actions\Role;
+
+use App\Exceptions\UpdateResourceFailedException;
+use Exception;
+use Modules\Dashboard\Tasks\Role\UpdatePermissionsTask;
+use Spatie\Permission\Models\Role;
+
+final class UpdatePermissionsAction
+{
+    private UpdatePermissionsTask $updatePermissionsTask;
+
+    public function __construct(UpdatePermissionsTask $updatePermissionsTask)
+    {
+        $this->updatePermissionsTask = $updatePermissionsTask;
+    }
+
+    public function run(array $attributes, Role $role): void
+    {
+        try {
+            $this->updatePermissionsTask->run($attributes, $role);
+        } catch (Exception) {
+            throw new UpdateResourceFailedException();
+        }
+    }
+}
