@@ -16,20 +16,20 @@
                                     <form action="{{ route('dashboard.login.store') }}" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <x-dashboard::input-label id="email" :value="__('dashboard::app.Email')" />
-                                            <x-dashboard::text-input name="email" type="email" :placeholder="__('dashboard::app.Enter :attribute', [
-                                                'attribute' => __('dashboard::app.Email'),
+                                            <x-dashboard::input-label id="email" :value="__('dashboard::app.inputs.Email')" />
+                                            <x-dashboard::text-input name="email" type="email" :placeholder="__('dashboard::app.inputs.Enter :attribute', [
+                                                'attribute' => __('dashboard::app.inputs.Email'),
                                             ])" />
                                             <x-dashboard::input-error :messages="$errors->get('email')" />
                                         </div>
 
                                         <div class="mb-3">
-                                            <x-dashboard::input-label id="password" :value="__('dashboard::app.Password')" />
+                                            <x-dashboard::input-label id="password" :value="__('dashboard::app.inputs.Password')" />
 
                                             <div class="position-relative auth-pass-inputgroup mb-3">
                                                 <x-dashboard::text-input type="password" name="password"
-                                                    :placeholder="__('dashboard::app.Enter :attribute', [
-                                                        'attribute' => __('dashboard::app.Password'),
+                                                    :placeholder="__('dashboard::app.inputs.Enter :attribute', [
+                                                        'attribute' => __('dashboard::app.inputs.Password'),
                                                     ])" class="password-input" />
                                                 <x-dashboard::button
                                                     class="btn-link position-absolute text-decoration-none text-muted password-addon end-0 top-0"
@@ -43,7 +43,7 @@
 
                                         <div class="mt-4">
                                             <x-dashboard::button type="submit" class="btn-success w-100">
-                                                {{ __('dashboard::app.Login') }}
+                                                {{ __('dashboard::app.buttons.Login') }}
                                             </x-dashboard::button>
                                         </div>
                                     </form>
