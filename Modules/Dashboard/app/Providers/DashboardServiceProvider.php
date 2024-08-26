@@ -7,6 +7,8 @@ namespace Modules\Dashboard\Providers;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Modules\Dashboard\Console\Commands\CreateAdminCommand;
+use Modules\Dashboard\Console\Commands\MakeModuleActionCommand;
+use Modules\Dashboard\Console\Commands\MakeModuleTaskCommand;
 
 final class DashboardServiceProvider extends ServiceProvider
 {
@@ -87,6 +89,8 @@ final class DashboardServiceProvider extends ServiceProvider
     {
         $this->commands([
             CreateAdminCommand::class,
+            MakeModuleActionCommand::class,
+            MakeModuleTaskCommand::class,
         ]);
     }
 

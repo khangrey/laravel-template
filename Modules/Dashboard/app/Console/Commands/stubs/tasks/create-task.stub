@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace $CLASS_NAMESPACE$;
+
+use App\Abstracts\Tasks\BaseCreateTask;
+
+final class $CLASS$ extends BaseCreateTask
+{
+    public function __construct() 
+    {
+        // set repository attribute
+    }
+}
